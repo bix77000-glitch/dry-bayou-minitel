@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<service>
+<service accueil="accueil">
 
-  <ecran id="sommaire">
+  <ecran id="accueil">
     <affiche url="accueil.vdt"/>
     <choix touche="1" ecran="musiciens"/>
     <choix touche="2" ecran="dates"/>
@@ -10,17 +10,17 @@
 
   <ecran id="musiciens">
     <affiche url="musiciens.vdt"/>
-    <choix touche="0" ecran="sommaire"/>
+    <choix touche="0" ecran="accueil"/>
   </ecran>
 
   <ecran id="dates">
     <affiche url="dates.vdt"/>
-    <choix touche="0" ecran="sommaire"/>
+    <choix touche="0" ecran="accueil"/>
   </ecran>
 
   <ecran id="contact">
     <affiche url="contact.vdt"/>
-    <choix touche="0" ecran="sommaire"/>
+    <choix touche="0" ecran="accueil"/>
   </ecran>
 
 </service>
