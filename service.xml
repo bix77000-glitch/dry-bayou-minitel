@@ -1,8 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<service accueil="sommaire">
+<service>
+  <!-- Balises OBLIGATOIRES d'après la doc -->
+  <interpreteur url="https://www.minipavi.fr/XMLint/?xurl=" />
+  <debut nom="sommaire" />
 
-  <ecran id="sommaire">
-    <affiche url="https://raw.githubusercontent.com/bix77000-glitch/dry-bayou-minitel/main/accueil.vdt"/>
-  </ecran>
+  <!-- PAGE SOMMAIRE -->
+  <page nom="sommaire">
+    <ecran>
+      <affiche url="https://raw.githubusercontent.com/bix77000-glitch/dry-bayou-minitel/main/accueil.vdt" />
+    </ecran>
+
+    <entree>
+      <!-- Saisie d’un caractère (1/2/3) + ENVOI. REP = rafraîchir sommaire -->
+      <zonesaisie ligne="24" col="40" longueur="1" curseur="visible" />
+      <validation touche="envoi" />
+      <validation touche="repetition" />
+    </entree>
+
+    <action defaut="Erreur de saisie!">
+      <saisie choix="1" touche="envoi" suivant="musiciens" />
+      <saisie choix="2" touche="envoi" suivant="dates" />
+      <saisie choix="3" touche="envoi" suivant="contact" />
+      <saisie touche="repetition" suivant="sommaire" />
+    </action>
+  </page>
+
+  <!-- PAGE MUSICIENS -->
+  <page nom="musiciens">
+    <ecran>
+      <affiche url="https://raw.githubusercontent.com/bix77000-glitch/dry-bayou-minitel/main/musiciens.vdt" />
+    </ecran>
+    <entree>
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="repetition" suivant="sommaire" />
+    </action>
+  </page>
+
+  <!-- PAGE DATES -->
+  <page nom="dates">
+    <ecran>
+      <affiche url="https://raw.githubusercontent.com/bix77000-glitch/dry-bayou-minitel/main/dates.vdt" />
+    </ecran>
+    <entree>
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="repetition" suivant="sommaire" />
+    </action>
+  </page>
+
+  <!-- PAGE CONTACT -->
+  <page nom="contact">
+    <ecran>
+      <affiche url="https://raw.githubusercontent.com/bix77000-glitch/dry-bayou-minitel/main/contact.vdt" />
+    </ecran>
+    <entree>
+      <validation touche="repetition" />
+    </entree>
+    <action>
+      <saisie touche="repetition" suivant="sommaire" />
+    </action>
+  </page>
 
 </service>
