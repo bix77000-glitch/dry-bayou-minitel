@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<service accueil="accueil">
+<service accueil="sommaire">
 
-  <ecran id="accueil">
-    <affiche url="accueil.vdt"/>
-    <choix touche="1" ecran="musiciens"/>
-    <choix touche="2" ecran="dates"/>
-    <choix touche="3" ecran="contact"/>
-  </ecran>
-
-  <ecran id="musiciens">
-    <affiche url="musiciens.vdt"/>
-    <choix touche="0" ecran="accueil"/>
-  </ecran>
-
-  <ecran id="dates">
-    <affiche url="dates.vdt"/>
-    <choix touche="0" ecran="accueil"/>
-  </ecran>
-
-  <ecran id="contact">
-    <affiche url="contact.vdt"/>
-    <choix touche="0" ecran="accueil"/>
+  <ecran id="sommaire">
+    <affiche url="https://raw.githubusercontent.com/bix77000-glitch/dry-bayou-minitel/main/accueil.vdt"/>
   </ecran>
 
 </service>
